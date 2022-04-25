@@ -1,0 +1,8 @@
+
+.top-container {
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../images/socal-sunny-day.jpg);
+    }
