@@ -35,7 +35,7 @@ function getAPI(cityName) {
                     cityName = locationData[i].name+', '+locationData[i].country;
                     // the second one is the actual call to get the current and forecast weather of the city
                     // this is due to OneCall only accepting latitude and longitude values in its API call
-                    var apiWeatherUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + locationData[i].lat + "&lon=" + locationData[i].lon + "&exclude=minutely,hourly,alerts&units=metric&appid=" + APIkey;
+                    var apiWeatherUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + locationData[i].lat + "&lon=" + locationData[i].lon + "&exclude=minutely,hourly,alerts&units=standard&appid=" + APIkey;
                     getWeather(apiWeatherUrl, cityName);
                 } else {
                     // city entered does not match any of the returned data
