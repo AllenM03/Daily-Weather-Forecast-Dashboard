@@ -48,3 +48,32 @@ function getAPI(cityName) {
             }
         });    
 }
+
+function getWeather(api, cityName) {    
+    //moved function out of getAPI so that it can also be called when clicking the buttons
+    fetch(api).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (weatherData) {
+                console.log(weatherData);
+                // display current weather
+                displayCurrentWeather(weatherData.current, cityName);
+                // use daily[1] to daily[6] from the API response to show the 5-day forecast
+                for (var i = 1; i < 6; i++){      
+                    displayForecast(weatherData.daily[i],i);   
+                }
+                // create button for history
+                createHistoryButton(cityName, api);
+            })
+        } else {
+            alert("Can't find weather in " + cityName);
+            return;
+        }
+    });
+}
+
+function displayCurrentWeather(resultObj, cityName) {
+    if (!currentWeatherEl.hasChildNodes()) {
+        //first time doing a search so create cards for the weather
+        var resultCard = document.createElement('div');
+        resultCard.classList.add('card', 'bg-light', 'text-dark', 'm-3', 'p-3', 'col-sm-11');
+}
