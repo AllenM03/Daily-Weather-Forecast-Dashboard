@@ -8,7 +8,7 @@ This weather dashboard shows the weather conditions in real time along with a fi
 A few different files were used in creating this application such as, HTML, CSS, and JavaScript powered by third-party API's such as Moment.js, Bootstrap, OpenWeather's GeoCoding and Ond Cal API's. 
 
 ## Demo
-[Click here to view the deployed page!](https://allenm03.github.io/office-task-planner)
+[Click here to view the deployed page!](https://allenm03.github.io/Daily-Weather-Forecast-Dashboard/)
 
 ## Contributions
 [Allen McBroom Bey](https://github.com/AllenM03)
